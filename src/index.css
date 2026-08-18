@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+:root {
+
+  --bg: #0a0e1a;
+  --panel: #0d1424;
+  --border: #1a2438;
+  --hover: #111a2e;
+  --accent: #3b82f6;
+  --text: #e8eaf0;
+  --text-muted: #8b93a7;
+  --green: #22c55e;
+  --red: #ef4444;
+}
+
 body {
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
 }
