@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import api from "../services/api";
+import api from "../../services/api";
+import "./Login.css";
 
 function Login() {
   // "Estado": o React guarda o que o usuário digita nestes campos.
@@ -30,27 +31,32 @@ function Login() {
   }
 
   return (
-    <div>
-      <h1>Wallo</h1>
-      <h2>Entrar</h2>
+    <div className="login-page">
+      <div className="logo">Wall<span>o</span></div>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+      <div className="container">
 
-        <input
-          type="password"
-          placeholder="Senha"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <form onSubmit={handleSubmit}>
+          <h2>Login</h2>
+          <input
+            name="Email"
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <button type="submit">Entrar</button>
-      </form>
+          <input
+            name="Senha"
+            type="password"
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
 
       {error && <p style={{ color: "red" }}>{error}</p>}
     </div>

@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Categories from "./pages/Categories/Categories";
 import Layout from "./components/Layout";
 import PrivateRoute from "./components/PrivateRoute";
 
@@ -19,6 +20,7 @@ function App() {
         }
       >
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/categories" element={<Categories />} />
         {/* As próximas telas entram aqui, uma por linha */}
       </Route>
 
