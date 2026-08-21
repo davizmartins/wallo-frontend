@@ -2,26 +2,89 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
-.page-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.page-sub {
-  color: var(--text-muted);
+.add-btn {
+  height: 42px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
   font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.add-btn:hover {
+  opacity: 0.85;
+}
+
+/* Formulário dentro do modal: empilhado na vertical */
+.category-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.category-form input {
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--hover);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.category-form input:focus {
+  border-color: var(--accent);
+} 
+
+.category-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.category-form select {
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--hover);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.category-form button {
+  height: 40px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.category-form button:hover {
+  opacity: 0.85;
 }
 
 .muted {
   color: var(--text-muted);
 }
 
-.error {
+.error-message {
   color: var(--red);
+  margin-bottom: 16px;
 }
 
 .list {
@@ -45,6 +108,12 @@
   font-weight: 500;
 }
 
+.item-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .badge {
   font-size: 12px;
   font-weight: 600;
@@ -59,5 +128,21 @@
 
 .badge-expense {
   background: rgba(239, 68, 68, 0.15);
+  color: var(--red);
+}
+
+.delete-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.delete-btn:hover {
+  border-color: var(--red);
   color: var(--red);
 }
