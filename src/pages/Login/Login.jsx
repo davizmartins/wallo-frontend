@@ -58,7 +58,7 @@ function Login() {
         </form>
       </div>
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
     </div>
   );
 }
