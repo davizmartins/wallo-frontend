@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../services/api";
 import "./Login.css";
+import { routes } from "../../routes";
 
 function Login() {
   // "Estado": o React guarda o que o usuário digita nestes campos.
@@ -24,8 +25,8 @@ function Login() {
       localStorage.setItem("token", response.data.token);
 
       // Redireciona para o dashboard.
-      navigate("/dashboard");
-    } catch (err) {
+      navigate(routes.dashboard);
+    } catch  {
       setError("Email ou senha inválidos");
     }
   }

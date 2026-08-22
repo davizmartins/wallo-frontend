@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../../services/api";
 import "./Categories.css";
-import Modal from "../../components/Modal";
+import Modal from "../../components/Modal/Modal";
 
 function Categories() {
   const [categories, setCategories] = useState([]);
