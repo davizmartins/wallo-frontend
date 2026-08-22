@@ -1,0 +1,81 @@
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.transaction-form input,
+.transaction-form select {
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--hover);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+  border-color: var(--accent);
+}
+
+.transaction-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.transaction-form select {
+  cursor: pointer;
+}
+
+.transaction-form input[type="number"]::-webkit-outer-spin-button,
+.transaction-form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.transaction-form input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.transaction-form button {
+  height: 46px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.transaction-form button:hover {
+  opacity: 0.85;
+}
+
+.tx-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tx-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.tx-income {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.tx-expense {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--red);
+}
