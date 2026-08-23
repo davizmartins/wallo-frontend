@@ -4,4 +4,5 @@ export const routes = {
   categories: "/categories",
   accounts: "/accounts",
   transactions: "/transactions",
+  register: "/register",
 };

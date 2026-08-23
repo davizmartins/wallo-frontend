@@ -1,0 +1,97 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-page .logo {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  padding: 32px 28px 0;
+  color: #fff;
+}
+
+.register-page .logo span {
+  color: var(--accent);
+}
+
+.register-page .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+  width: 100%;
+}
+
+.register-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 14px;
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-page form h2 {
+  font-size: 28px;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.register-page form input {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  height: 44px;
+  background-color: var(--hover);
+  color: var(--text);
+  font-size: 15px;
+  padding: 0 16px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.register-page form input:focus {
+  border-color: var(--accent);
+}
+
+.register-page form input::placeholder {
+  color: var(--text-muted);
+}
+
+.register-page form button {
+  border-radius: 10px;
+  background-color: var(--accent);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  height: 44px;
+  transition: opacity 0.15s;
+}
+
+.register-page form button:hover {
+  opacity: 0.85;
+}
+
+.switch-auth {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.switch-auth a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch-auth a:hover {
+  text-decoration: underline;
+}
