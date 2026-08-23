@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { useToast } from "../../components/Toast/toast-context";
 import api from "../../services/api";
 import "./Login.css";
 import { routes } from "../../routes";
@@ -8,14 +9,13 @@ function Login() {
   // "Estado": o React guarda o que o usuário digita nestes campos.
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const showToast = useToast();
 
   const navigate = useNavigate(); // permite trocar de tela após o login
 
   // Executado quando o formulário é enviado.
   async function handleSubmit(event) {
     event.preventDefault(); // impede o recarregamento padrão da página
-    setError("");
 
     try {
       // Chama POST /auth/login com email e senha.
@@ -26,8 +26,8 @@ function Login() {
 
       // Redireciona para o dashboard.
       navigate(routes.dashboard);
-    } catch  {
-      setError("Email ou senha inválidos");
+    } catch {
+      showToast("Email ou senha inválidos");
     }
   }
 
@@ -56,10 +56,11 @@ function Login() {
           />
 
           <button type="submit">Entrar</button>
+          <p className="switch-auth">
+            Não tem conta? <Link to={routes.register}>Cadastre-se</Link>
+          </p>
         </form>
       </div>
-
-      {error && <p className="error-message">{error}</p>}
     </div>
   );
 }

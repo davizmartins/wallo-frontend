@@ -6,6 +6,7 @@ import Layout from "./components/Layout/Layout";
 import Accounts from "./pages/Accounts/Accounts";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Transactions from "./pages/Transactions/Transactions";
+import Register from "./pages/Register/Register";
 import { routes } from "./routes";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <Routes>
       {/* Rota pública: login */}
       <Route path={routes.login} element={<Login />} />
+      <Route path={routes.register} element={<Register />} />
 
       {/* Rotas internas: protegidas e dentro do Layout (com a sidebar) */}
       <Route
