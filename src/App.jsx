@@ -28,7 +28,7 @@ function App() {
         <Route path={routes.categories} element={<Categories />} />
         <Route path={routes.accounts} element={<Accounts />} />
         <Route path={routes.transactions} element={<Transactions />} />
-        {/* As próximas telas entram aqui, uma por linha */}
+        {}
       </Route>
 
       {/* Raiz redireciona pro dashboard */}
